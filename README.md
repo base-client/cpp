@@ -43,37 +43,8 @@
 
 ## Operation
 ### socket-client
- - start
-   - standalone
-     - `./build/install/socket-client -c ./test_data/config/ -s`
-   - non standalone
-     - `./build/install/socket-client -c ./test_data/config/`
- - stop
-```bash
-$ telnet 0 10002
-Trying 0.0.0.0...
-Connected to 0.
-Escape character is '^]'.
-=== greeting ===
-stop
-200 ok
-```
- - admin
-```bash
-$ telnet 0 10002
-Trying 0.0.0.0...
-Connected to 0.
-Escape character is '^]'.
-=== greeting ===
-help
-help : print command
-log_reconfigure : log reconfigure
-quit : connect end
-stop : process stop
-200 ok
-quit
-200 ok
-```
+ - run
+   - `./build/install/socket-client -c ./test_data/config/`
  - log
    - `/tmp/test/log/socket_client_YYYYMMDD.log`
  - config
