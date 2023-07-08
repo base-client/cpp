@@ -1,25 +1,23 @@
 #pragma once
 
 #include "Config.h"
+#include <string>
+
+using namespace std;
 
 class SocketClientConfig : public Config {
-private:
-	int iAdminPort;
-	int iAdminTimeout;
+	private:
+		string serverAddress;
+		int serverPort;
+		int serverTimeout;
 
-	string strServerAddress;
-	int iServerPort;
-	int iServerTimeout;
+		virtual bool InitializeDerived() final;
 
-	virtual bool InitializeDerived();
-public:
-	SocketClientConfig();
-	virtual ~SocketClientConfig() = default;
+	public:
+		SocketClientConfig();
+		virtual ~SocketClientConfig() = default;
 
-	int GetAdminPort();
-	int GetAdminTimeout();
-
-	string GetServerAddress();
-	int GetServerPort();
-	int GetServerTimeout();
+		string GetServerAddress() const;
+		int GetServerPort() const;
+		int GetServerTimeout() const;
 };
