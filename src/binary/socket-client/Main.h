@@ -1,11 +1,17 @@
 #pragma once
 
+#include "EnvironmentVariable.h"
+
 class Main {
-private:
+	private:
+		EnvironmentVariable environmentVariable;
 
-public:
-	Main() = default;
-	virtual ~Main() = default;
+		bool Initialize(int argc, char *argv[]);
+		bool Job();
 
-	bool Run(int iArgc, char *pcArgv[]);
+	public:
+		Main() = default;
+		virtual ~Main() = default;
+
+		bool Run(int argc, char *argv[]);
 };
