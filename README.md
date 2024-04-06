@@ -1,4 +1,4 @@
-# base-client-cpp
+# Base Client for C++
 
 ## Features
  - socket client
